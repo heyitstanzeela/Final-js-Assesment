@@ -16,8 +16,8 @@ function allDigits(str, len) {
     for (let i = 0; i < len; i++) {
       // If the current character is a digit
       if (isDigit(str[i])) {
-        t;
-        let digit = str[i] - "0";
+    
+        let digit = str[i] - 0;
         present[digit] = true;
       }
     }
@@ -31,13 +31,16 @@ function allDigits(str, len) {
   }
 }
 
-let str = "1234567890";
+//let str = "1234567890";
+let str=prompt("Enter the number")
 let len = str.length;
 
 if (allDigits(str, len)) {
   console.log("Contains all the digits(0-9)");
-  document.write("Contains all digits from(0-9");
-} else {
+  document.write("Contains all digits from(0-9)");
+}
+
+else {
   console.log("It doesn't contains all the digits(0-9)");
-  document.write("Contains all digits from(0-9");
+  document.write("It doesn't contains all the digits(0-9)");
 }
